@@ -1,0 +1,13 @@
+{
+    "id": "irccloud",
+    "name": "IRCCloud",
+    "version": "1.0.1",
+    "description": "IRCCloud",
+    "main": "index.js",
+    "author": "Alberto Murillo <albertomurillosilva@gmail.com>",
+    "license": "MIT",
+    "config": {
+      "serviceURL": "https://www.irccloud.com",
+      "hasNotificationSound": true
+    }
+  }
