@@ -2,21 +2,11 @@ const path = require('path');
 
 module.exports = (Franz) => {
   const getMessages = function getMessages() {
-	var indirects = document.getElementsByClassName("buffer channel active unread").length;
-	var directs = document.getElementsByClassName("buffer conversation active unread activeBadge").length;
+    var directMessages = document.getElementsByClassName("buffer conversation active unread activeBadge").length;
+    var indirectMessages = document.getElementsByClassName("buffer channel active unread").length;
 
-	if (isNaN(indirects)) {
-		indirects = 0;
-	}
-
-	if (isNaN(directs)) {
-		directs = 0;
-    }
-
-    // set Franz badge
-    Franz.setBadge(directs + indirects);
+    Franz.setBadge(directMessages, indirectMessages);
   };
 
-  // check for new messages every second and update Franz badge
   Franz.loop(getMessages);
 };

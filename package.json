@@ -1,13 +1,14 @@
 {
     "id": "irccloud",
     "name": "IRCCloud",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "IRCCloud",
     "main": "index.js",
     "author": "Alberto Murillo <albertomurillosilva@gmail.com>",
     "license": "MIT",
     "config": {
       "serviceURL": "https://www.irccloud.com",
-      "hasNotificationSound": true
+      "hasDirectMessages": true,
+      "hasIndirectMessages": true
     }
   }
